@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ngrok-ip-to-discord:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ngrok_ip_to_discord_jar</output-path>
+    <root id="archive" name="ngrok-ip-to-discord.jar">
+      <element id="module-output" name="ngrok-ip-to-discord" />
+    </root>
+  </artifact>
+</component>
