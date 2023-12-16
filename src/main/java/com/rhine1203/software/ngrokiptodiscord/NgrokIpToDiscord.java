@@ -26,6 +26,7 @@ public class NgrokIpToDiscord {
         failMessage = loader.loadFailMessage();
         
         client = DiscordClientBuilder.create(loader.loadToken()).build().login().block();
+        System.out.println("Client connected");
         Snowflake channelId = Snowflake.of(loader.loadChannel());
 
         //On startup

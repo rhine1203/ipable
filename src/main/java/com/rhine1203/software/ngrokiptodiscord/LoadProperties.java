@@ -1,19 +1,16 @@
 package com.rhine1203.software.ngrokiptodiscord;
 
 import java.io.InputStream;
-import java.util.Scanner;
+import org.apache.commons.io.IOUtils;
 
 public class LoadProperties {
     String[] content = new String[4];
     public LoadProperties(){
         try{
             InputStream inputStream = getClass().getResourceAsStream("/app.properties");
-            Scanner scanner = new Scanner(inputStream).useDelimiter("\n");
-            for (int i = 0; i < content.length; i++) {
-                content[i] = scanner.next();
-            }
-            scanner.close();
+            content = IOUtils.readLines(inputStream, "UTF-8").toArray(content);
         }catch(Exception e){
+            System.out.println("Exception occured while loading properties.");
             e.printStackTrace();
         }
     }
@@ -28,7 +25,12 @@ public class LoadProperties {
     public Long loadChannel(){
         long channelID = 0;
 
-        channelID = Long.parseLong(content[1].split("channelID=")[1]);
+        try {
+            channelID = Long.parseLong(content[1].split("channelID=")[1]);
+        } catch (Exception e) {
+            System.out.println("Exception occured while parsing Channel ID.");
+            e.printStackTrace();
+        }
         System.out.println("Loaded channel ID: " + channelID);        
         return channelID;
     }
