@@ -1,4 +1,4 @@
-package com.rhine1203.software.ngrokiptodiscord;
+package com.rhine1203.software.ipable;
 
 import discord4j.common.util.Snowflake;
 import discord4j.core.DiscordClientBuilder;

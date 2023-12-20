@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.rhine1203.software</groupId>
-    <artifactId>ngrok-ip-to-discord</artifactId>
-    <version>1.0</version>
+    <artifactId>ipable</artifactId>
+    <version>0.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -61,7 +61,7 @@
                             <manifest>
                                 <addClasspath>true</addClasspath>
                                 <classpathPrefix>lib/</classpathPrefix>
-                                <mainClass>com.rhine1203.software.ngrokiptodiscord.NgrokIpToDiscord</mainClass>
+                                <mainClass>com.rhine1203.software.ipable.NgrokIpToDiscord</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -72,7 +72,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.rhine1203.software.ngrokiptodiscord.NgrokIpToDiscord</mainClass>
+                                <mainClass>com.rhine1203.software.ipable.NgrokIpToDiscord</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -83,7 +83,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>com.rhine1203.software.ngrokiptodiscord.NgrokIpToDiscord</mainClass>
+                                <mainClass>com.rhine1203.software.ipable.NgrokIpToDiscord</mainClass>
                                 </manifest>
                             </archive>
                         <descriptorRefs>

@@ -1,4 +1,4 @@
-package com.rhine1203.software.ngrokiptodiscord;
+package com.rhine1203.software.ipable;
 
 import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
