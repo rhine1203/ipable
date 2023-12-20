@@ -75,7 +75,7 @@ public class NgrokIpToDiscord {
             client.getChannelById(channelID)
             .ofType(MessageChannel.class)
             .flatMap(channel -> channel.getMessageById(messageID))
-            .flatMap(Message::delete)
+            .flatMap(message -> message.delete())
             .subscribe();
             System.out.println("Deleted message: " + messageID.asString());
         }else{
