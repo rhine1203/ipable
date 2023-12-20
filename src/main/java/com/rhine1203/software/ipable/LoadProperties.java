@@ -37,7 +37,7 @@ public class LoadProperties {
     public String loadEndKey(){
         String endKey = null;
 
-        endKey = content[2].split("endKey=")[1];
+        endKey = content[2].split("endMessage=")[1];
         System.out.println("Loaded endKey: " + endKey);
         return endKey;
     }
