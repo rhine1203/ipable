@@ -13,3 +13,10 @@ Software that sends ngrok ip to a specified channel on Discord
 5. ngrokでtcpを起動したら、その.jarファイルを開いてください。 <br>
 ![image](https://github.com/rhine1203/ipable/assets/138958366/c195bf55-c9c8-4f07-be36-ce5662878f46)
 
+<details>
+<summary>Name rules</summary>
+
+1. normal - IPable <br>
+2. in Code - ipable <br>
+3. Other - ipable <br>
+</details>
