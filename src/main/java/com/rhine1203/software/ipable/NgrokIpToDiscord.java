@@ -40,6 +40,17 @@ public class NgrokIpToDiscord {
             RespondByMessage(message);
         });
 
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                try {
+                    DeleteMessage(sentMessage.getChannelId(), sentMessage.getId());
+                    Thread.sleep(2000);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+            }
+        });
+
         client.onDisconnect()
         .block();
         
@@ -73,10 +84,10 @@ public class NgrokIpToDiscord {
     private static void DeleteMessage(Snowflake channelID, Snowflake messageID){
         if (messageID != null){
             client.getChannelById(channelID)
-            .ofType(MessageChannel.class)
-            .flatMap(channel -> channel.getMessageById(messageID))
-            .flatMap(message -> message.delete())
-            .subscribe();
+                .ofType(MessageChannel.class)
+                .flatMap(channel -> channel.getMessageById(messageID))
+                .flatMap(message -> message.delete())
+                .subscribe();
             System.out.println("Deleted message: " + messageID.asString());
         }else{
             System.out.println("Message IP is null. Deletion failed.");
