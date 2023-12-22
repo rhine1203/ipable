@@ -1,5 +1,7 @@
 # IPable
 Software that sends ngrok ip to a specified channel on Discord
+## Warning
+- このソフトウェアを閉じるときは**必ずCtrl+Cを使って**閉じてください。
 ## Quick Start
 # Please wait for English ver.
 1. まずダウンロードした.jarファイルを7-zipか何かで開いてください。 <br>
